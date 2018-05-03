@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import 'containers/Game.css';
+import Stars from 'components/Stars';
 
 var possibleCombinationSum = function (arr, n) {
     if (arr.indexOf(n) >= 0) {
@@ -28,15 +29,6 @@ var possibleCombinationSum = function (arr, n) {
     return false;
 };
 
-const Stars = (props) => {
-    return (
-        <div className="col-6">
-            {_.range(props.numberOfStars).map(i =>
-                <i key={i} className="fa fa-star"></i>
-            )}
-        </div>
-    );
-};
 
 const Button = (props) => {
     let button;
@@ -204,7 +196,7 @@ class Game extends Component {
 
         return (
             <div className="container">
-                <h3>Play Nine</h3>
+                <h3 className="text-center">Play Nine</h3>
                 <hr/>
                 <div className="row">
                     <Stars numberOfStars={randomNumberOfStars}/>
