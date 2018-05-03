@@ -1,6 +1,6 @@
 import React from 'react';
-import _ from "lodash";
-import "./Numbers.css";
+import _ from 'lodash';
+import './Numbers.css';
 
 const Numbers = (props) => {
     const numberClassName = (number) => {
