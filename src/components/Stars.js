@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from "lodash";
-import 'components/Stars.css';
+import './Stars.css';
 
 const Stars = (props) => {
     return (
