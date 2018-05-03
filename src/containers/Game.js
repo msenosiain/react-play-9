@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import 'containers/Game.css';
 import Stars from 'components/Stars';
+import Numbers from 'components/Numbers';
 
 var possibleCombinationSum = function (arr, n) {
     if (arr.indexOf(n) >= 0) {
@@ -29,9 +30,6 @@ var possibleCombinationSum = function (arr, n) {
     return false;
 };
 
-
-
-
 const Answer = (props) => {
     return (
         <div className="col-5">
@@ -44,30 +42,6 @@ const Answer = (props) => {
     );
 };
 
-const Numbers = (props) => {
-    const numberClassName = (number) => {
-        if (props.usedNumbers.indexOf(number) >= 0) {
-            return 'used';
-        }
-        if (props.selectedNumbers.indexOf(number) >= 0) {
-            return 'selected';
-        }
-    };
-    return (
-        <div className="card text-center">
-            <div>
-                {Numbers.list.map((number, i) =>
-                        <span key={i} className={numberClassName(number)}
-                              onClick={() => props.selectNumber(number)}>
-          	{number}
-          </span>
-                )}
-            </div>
-        </div>
-    );
-};
-
-Numbers.list = _.range(1, 10);
 const DoneFrame = (props) => {
     return (
         <div className="text-center">
