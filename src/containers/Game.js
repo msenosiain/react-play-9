@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import 'containers/Game.css';
 
 var possibleCombinationSum = function (arr, n) {
     if (arr.indexOf(n) >= 0) {
@@ -29,7 +30,7 @@ var possibleCombinationSum = function (arr, n) {
 
 const Stars = (props) => {
     return (
-        <div className="col-5">
+        <div className="col-6">
             {_.range(props.numberOfStars).map(i =>
                 <i key={i} className="fa fa-star"></i>
             )}
@@ -62,7 +63,7 @@ const Button = (props) => {
             break;
     }
     return (
-        <div className="col-2 text-center">
+        <div className="col-1 text-center">
             {button}
             <br/><br/>
             <button className="btn btn-warning btn-sm" onClick={props.redraw}
