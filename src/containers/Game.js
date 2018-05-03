@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import 'containers/Game.css';
 import Stars from 'components/Stars';
+import Button from 'components/Button';
 import Numbers from 'components/Numbers';
 
 var possibleCombinationSum = function (arr, n) {
